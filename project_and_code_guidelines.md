@@ -4,22 +4,6 @@
 
 New projects should follow the Android Gradle project structure that is defined on the [Android Gradle plugin user guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure). The [BoilerPlate](https://github.com/ribot/android-boilerplate) project is a good reference.
 
-## 1.2 Package structure 
-
-#### App
-* ui
-	* fragment
-	* activity
-	* dialog
-	* widget
-	* adapter
-* service
-* data
-	* remote
-	* local
-	* model	 
-* util
-
 ## 1.3 File naming 
 
 ### 1.3.1 Class files
@@ -37,36 +21,36 @@ Naming conventions for drawables:
 
 
 | Asset Type   | Prefix            |		Example               |
-|--------------| ------------------|-----------------------------|
-| Action bar   | `ab_`             | `ab_stacked.9.png`          |
-| Button       | `btn_`	            | `btn_send_pressed.9.png`    |
-| Dialog       | `dialog_`         | `dialog_top.9.png`          | 
-| Divider      | `divider_`        | `divider_horizontal.9.png`  |
-| Icon         | `ic_`	            | `ic_star.png`               |
-| Menu         | `menu_	`           | `menu_submenu_bg.9.png`     |
-| Notification | `notification_`	| `notification_bg.9.png`     |
-| Tabs         | `tab_`            | `tab_pressed.9.png`         |
+|--------------| ------------------|----------------------------------|
+| Toolbar      | `toolbar_`        | `toolbar_stacked.9.png`          |
+| Button       | `button_`         | `button_send_pressed.9.png`      |
+| Dialog       | `dialog_`         | `dialog_top.9.png`               | 
+| Divider      | `divider_`        | `divider_horizontal.9.png`       |
+| Icon         | `icon_`           | `icon_star.png`                  |
+| Menu         | `menu_	`          | `menu_submenu_bg.9.png`          |
+| Notification | `notification_`   | `notification_bg.9.png`          |
+| Tabs         | `tab_`            | `tab_pressed.9.png`              |
 
 Naming conventions for icons (taken from [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
 
-| Asset Type                      | Prefix             | Example                      |
-| --------------------------------| ----------------   | ---------------------------- | 
-| Icons                           | `ic_`              | `ic_star.png`                |
-| Launcher icons                  | `ic_launcher`      | `ic_launcher_calendar.png`   |
-| Menu icons and Action Bar icons | `ic_menu`          | `ic_menu_archive.png`        |
-| Status bar icons                | `ic_stat_notify`   | `ic_stat_notify_msg.png`     |
-| Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
-| Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
+| Asset Type                      | Prefix               | Example                        |
+| --------------------------------| -----------------    | ----------------------------   | 
+| Icons                           | `icon_`              | `icon_star.png`                |
+| Launcher icons                  | `icon_launcher`      | `icon_launcher_calendar.png`   |
+| Menu icons and Action Bar icons | `icon_menu`          | `icon_menu_archive.png`        |
+| Status bar icons                | `icon_stat_notify`   | `icon_stat_notify_msg.png`     |
+| Tab icons                       | `icon_tab`           | `icon_tab_recent.png`          |
+| Dialog icons                    | `icon_dialog`        | `icon_dialog_info.png`         |
 
 Naming conventions for selector states:
 
 | State	       | Suffix          | Example                     |
 |--------------|-----------------|-----------------------------|
-| Normal       | `_normal`       | `btn_order_normal.9.png`    |
-| Pressed      | `_pressed`      | `btn_order_pressed.9.png`   |
-| Focused      | `_focused`      | `btn_order_focused.9.png`   |
-| Disabled     | `_disabled`     | `btn_order_disabled.9.png`  |
-| Selected     | `_selected`     | `btn_order_selected.9.png`  |
+| Normal       | `_normal`       | `button_order_normal.9.png`    |
+| Pressed      | `_pressed`      | `button_order_pressed.9.png`   |
+| Focused      | `_focused`      | `button_order_focused.9.png`   |
+| Disabled     | `_disabled`     | `button_order_disabled.9.png`  |
+| Selected     | `_selected`     | `button_order_selected.9.png`  |
 
 
 #### 1.3.1.2 Layout files
