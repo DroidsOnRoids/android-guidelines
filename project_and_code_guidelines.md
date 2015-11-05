@@ -144,10 +144,10 @@ Example:
 public class MyClass {
     public static final int SOME_CONSTANT = 42;
     public int publicField;
-    private static MyClass sSingleton;
-    int mPackagePrivate;
-    private int mPrivate;
-    protected int mProtected;
+    private static MyClass singleton;
+    int packagePrivate;
+    private int private;
+    protected int protected;
 }
 ```
 	
