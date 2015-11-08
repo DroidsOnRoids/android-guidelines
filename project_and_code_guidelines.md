@@ -63,11 +63,11 @@ Layout files should match the name of the Android components that they are inten
 | Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
 | Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
 | AdapterView item | ---                    | `item_person.xml`             |
-| Partial layout   | ---                    | `partial_stats_bar.xml`       |
+| Include layout   | ---                    | `include_stats_bar.xml`       |
 
 A slighly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `item_`
 
-Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix `partial_`
+Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix `include_`
 
 #### 1.2.1.3 Menu files  
 
@@ -135,7 +135,9 @@ See more info [here](https://source.android.com/source/code-style.html#fully-qua
 
 Fields should be defined at the __top of the file__ and they should follow the naming rules listed below.
 
-* Fields start with a lower case letter.
+* Private, non-static field names start with __m__.
+* Private, static field names start with __s__.
+* Other fields start with a lower case letter.
 * Static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
 
 Example:
@@ -144,12 +146,23 @@ Example:
 public class MyClass {
     public static final int SOME_CONSTANT = 42;
     public int publicField;
-    private static MyClass singleton;
-    int packagePrivate;
-    private int private;
-    protected int protected;
+    private static MyClass sSingleton;
+    int mPackagePrivate;
+    private int mPrivate;
+    protected int mProtected;
 }
 ```
+
+### 2.2.1.1 Android framework elements naming
+
+Elements from Android framework should be prefixed with the name of the element. For example:
+
+| Element            | Prefix            |
+| -----------------  | ----------------- |
+| `TextView`           | `mTextName`             |
+| `ImageView`          | `mImageAvatar`            | 
+| `Button`             | `mButtonSave`           |   
+| `Menu`               | `mMenuSortRules`             |
 	
 ### 2.2.2 Treat acronyms as words
 
@@ -217,6 +230,8 @@ According to the Android code style guide, the standard practices for some of th
 * `@Override`: The @Override annotation __must be used__ whenever a method overrides the declaration or implementation from a super-class. For example, if you use the @inheritdocs Javadoc tag, and derive from a class (not an interface), you must also annotate that the method @Overrides the parent class's method.
 
 * `@SuppressWarnings`: The @SuppressWarnings annotation should only be used under circumstances where it is impossible to eliminate a warning. If a warning passes this "impossible to eliminate" test, the @SuppressWarnings annotation must be used, so as to ensure that all warnings reflect actual problems in the code.
+
+Note that annotation should be written above code that needs it (class field, method declaration, etc.).
 
 More information about annotations guidelines can be found [here](http://source.android.com/source/code-style.html#use-standard-java-annotations).
 
@@ -354,7 +369,7 @@ Example:
 
 ```java
 // Note the value of the field is the same as the name to avoid duplication issues
-static final String PREFERENCE_EMAIL = "PREF_EMAIL";
+static final String PREFERENCE_EMAIL = "PREFERENCE_EMAIL";
 static final String BUNDLE_AGE = "BUNDLE_AGE";
 static final String ARGUMENT_USER_ID = "ARGUMENT_USER_ID";
 
