@@ -153,7 +153,7 @@ public class MyClass {
 }
 ```
 
-### 2.2.1.1 Android framework elements naming
+#### 2.2.1.1 Android framework elements naming
 
 Elements from Android framework should be prefixed with the name of the element. For example:
 
